@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,7 +14,8 @@
   "packageManager": "yarn@1.22.22",
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "next": "$next"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -25,7 +26,7 @@
     "clsx": "^2.1.1",
     "easymde": "^2.19.0",
     "lucide-react": "^0.475.0",
-    "next": "15.1.7",
+    "next": "15.0.0-canary.183",
     "next-auth": "^5.0.0-beta.25",
     "next-sanity": "^9.8.58-canary.0",
     "react": "^19.0.0",
