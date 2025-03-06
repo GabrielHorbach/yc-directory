@@ -33,7 +33,7 @@ const StartupForm = () => {
       const result = await createPitch(prevState, formData, pitch);
 
       if (result.status === "SUCCESS") {
-        toast("Success", {
+        toast.success("Success", {
           description: "Your startup pitch has been created successfully",
           dismissible: true,
         });
@@ -45,7 +45,7 @@ const StartupForm = () => {
       if (error instanceof ZodError) {
         const fieldErorrs = error.flatten().fieldErrors;
         setErrors(fieldErorrs as unknown as Record<string, string>);
-        toast("Error", {
+        toast.error("Error", {
           description: "Please check your inputs and try again",
           dismissible: true,
         });
@@ -53,7 +53,7 @@ const StartupForm = () => {
         return { ...prevState, error: "Validation failed", status: "ERROR" };
       }
 
-      toast("Error", {
+      toast.error("Error", {
         description: "An unexpected error has occurred",
         dismissible: true,
       });
